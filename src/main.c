@@ -269,7 +269,7 @@ scrot_sel_and_grab_image(void)
           if (btn_pressed) {
             if (rect_w) {
               /* re-draw the last rect to clear it */
-              XDrawRectangle(disp, root, gc, rect_x, rect_y, rect_w, rect_h);
+              //XDrawRectangle(disp, root, gc, rect_x, rect_y, rect_w, rect_h);
             }
 
             rect_x = rx;
@@ -304,7 +304,7 @@ scrot_sel_and_grab_image(void)
               rect_h = 0 - rect_h;
             }
             /* draw rectangle */
-            XDrawRectangle(disp, root, gc, rect_x, rect_y, rect_w, rect_h);
+            //XDrawRectangle(disp, root, gc, rect_x, rect_y, rect_w, rect_h);
             XFlush(disp);
           }
           break;
@@ -345,7 +345,7 @@ scrot_sel_and_grab_image(void)
       gib_eprintf("Connection to X display lost");
   }
   if (rect_w) {
-    XDrawRectangle(disp, root, gc, rect_x, rect_y, rect_w, rect_h);
+    //XDrawRectangle(disp, root, gc, rect_x, rect_y, rect_w, rect_h);
     XFlush(disp);
   }
   XUngrabPointer(disp, CurrentTime);
